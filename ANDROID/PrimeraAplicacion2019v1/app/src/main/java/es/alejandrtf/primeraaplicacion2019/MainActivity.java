@@ -1,7 +1,6 @@
 package es.alejandrtf.primeraaplicacion2019;
 
 import android.content.Intent;
-import android.support.annotation.MainThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,14 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import es.alejandrtf.primeraaplicacion2019.R;
 
 import static android.view.View.VISIBLE;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etNombreJava;
     private Button btSaludarJava, btOcultarMostrar, btSaludarOtraPantalla;
-    private View.OnClickListener miListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btSaludarOtraPantalla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, es.alejandrtf.primeraaplicacin2019.PantallaSaludo.class);
+                Intent i = new Intent(MainActivity.this,PantallaSaludo.class);
                 i.putExtra("nombre", etNombreJava.getText().toString());
                 startActivity(i);
             }
@@ -71,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         etNombreJava = findViewById(R.id.etNombre);
         btSaludarJava = findViewById(R.id.btSaludar);
         btOcultarMostrar = findViewById(R.id.btOcultar);
+        btSaludarOtraPantalla=findViewById(R.id.btSaludarNuevaPantalla);
     }
 
 
