@@ -1,8 +1,10 @@
-package es.alejandrtf.primeraaplicacion2019;
+package es.alejandrtf.primeraaplicacin2019;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import es.alejandrtf.primeraaplicacion2019.R;
 
 public class PantallaSaludo extends AppCompatActivity {
     private TextView textoMensaje;
@@ -13,8 +15,8 @@ public class PantallaSaludo extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_saludo);
 
 
-        String nombreUser=getIntent().getStringExtra("nombre");
-        ((TextView)findViewById(R.id.tvMensaje)).setText("Hola"+nombreUser);
+        String nombreUser = getIntent().getStringExtra("nombre");
+        ((TextView) findViewById(R.id.tvMensaje)).setText("Hola " + nombreUser);
 
     }
 }
