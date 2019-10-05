@@ -20,6 +20,9 @@
  Esta aplicación la he descompuesto en 3 versiones diferentes, para que veais claramente las tres formas posibles de programar el evento "click" de los botones:
  * **PrimeraAplicación2019v1**. Esta versión implementa todos los "clicks" de los botones usando OnClickListener mediante una clase anónima; es decir, instanciándolo en cada botón.
  
+ * **PrimeraAplicación2019v2**. Esta versión implementa los "clicks" de los botones implementando el interface OnClickListener en la propia clase MainActivity (implements OnClickListener). Al pulsar sobre cualquier botón se llamará al mismo método onClick()
+ 
+ 
  ## UT1
  Aún nada
  
