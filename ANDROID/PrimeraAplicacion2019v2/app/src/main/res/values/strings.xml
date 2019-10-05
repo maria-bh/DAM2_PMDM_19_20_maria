@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Primera Aplicación 2019</string>
+    <string name="saludar">Saludar</string>
+    <string name="ocultar">Ocultar</string>
+    <string name="texto_saludo_base">Hola </string>
+    <string name="label_nombre">Introduce tu nombre</string>
+    <string name="nombre">Nombre</string>
+    <string name="saludar_otra_pantalla">Saludar en otra pantalla</string>
+    <string name="mitexto">Hola que tal</string>
+</resources>
