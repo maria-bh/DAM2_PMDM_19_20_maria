@@ -1,4 +1,4 @@
-package es.alejandrtf.primeraaplicacin2019;
+package es.alejandrtf.primeraaplicacion2019;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import es.alejandrtf.primeraaplicacin2019.PantallaSaludo;
 
 import static android.view.View.VISIBLE;
 
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     }
 
     public void saludarOtraPantalla(View view) {
-        Intent i=new Intent(this,PantallaSaludo.class);
+        Intent i=new Intent(this, PantallaSaludo.class);
         i.putExtra("nombre",etNombreJava.getText().toString());
         startActivity(i);
     }
