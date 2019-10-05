@@ -14,7 +14,7 @@ import static android.view.View.VISIBLE;
 public class MainActivity extends AppCompatActivity {
     private EditText etNombreJava;
     private Button btSaludarJava, btOcultarMostrar, btSaludarOtraPantalla;
-
+    private View.OnClickListener miListener; // listener para usar en los botones
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
         initReferenciasViewsFromXML();
 
         // BOTÓN SALUDAR
+        /** Hay 2 formas de hacerlo:
+         *  1) Creando una clase anónima
+         *  2) Definiendo un objeto de tipo OnClickListener e instanciándolo y luego
+         *      asignándolo al setOnClickListener
+         *
+         */
+
+        // FORMA 1: clase anónima
         btSaludarJava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +40,23 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        // FIN de FORMA 1
+
+        /* FORMA 2: usando un objeto llamado "miListener" de tipo OnClickListener
+           previamente definido al principio de la clase:
+
+            miListener=new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String texto=etNombreJava.getText().toString();
+                    Toast.makeText(MainActivity.this, "Hola "+texto, Toast.LENGTH_SHORT).show();
+
+                    }
+              };
+            btSaludarJava.setOnClickListener(miListener);
+        */
+
+
 
         // BOTÓN OCULTAR/MOSTRAR
         btOcultarMostrar.setOnClickListener(new View.OnClickListener() {
