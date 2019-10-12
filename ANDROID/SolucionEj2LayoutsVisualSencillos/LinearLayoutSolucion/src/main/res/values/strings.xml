@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SolucionEj2LayoutsVisualSencillos</string>
+    <string name="layout_type_here">Layout Type Here</string>
+    <string name="layout_colores_centrados">Layout colores centrados</string>
+    <string name="layout_colores_escalera_here">Layout colores escalera</string>
+    <string name="layout_teclado_numeros_here">Layout Teclado Números</string>
+    <string name="layout_calculadora">Layout calculadora</string>
+    <string name="type_here">Type here:</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+    <string name="red">RED</string>
+    <string name="orange">ORANGE</string>
+    <string name="yellow">YELLOW</string>
+    <string name="green">GREEN</string>
+    <string name="blue">BLUE</string>
+    <string name="indigo">INDIGO</string>
+    <string name="violet">VIOLET</string>
+    <string name="label_elige_opcion_menu">Elige el layout deseado en el menú superior</string>
+    <string name="uno">1</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="cuatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="siete">7</string>
+    <string name="ocho">8</string>
+    <string name="nueve">9</string>
+    <string name="cero">0</string>
+    <string name="sumar">+</string>
+    <string name="igual">=</string>
+    <string name="borrar">C</string>
+</resources>
