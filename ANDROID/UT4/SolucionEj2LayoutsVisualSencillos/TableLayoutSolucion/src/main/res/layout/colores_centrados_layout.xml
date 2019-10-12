@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:padding="8dp"
+            android:text="@string/red"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:padding="8dp"
+            android:text="@string/orange"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:padding="8dp"
+            android:text="@string/yellow"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:padding="8dp"
+            android:text="@string/green"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:padding="8dp"
+            android:text="@string/blue"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvIndigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/indigo"
+            android:padding="8dp"
+            android:text="@string/indigo"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvViolet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/violet"
+            android:padding="8dp"
+            android:text="@string/violet"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </TableRow>
+
+
+</TableLayout>

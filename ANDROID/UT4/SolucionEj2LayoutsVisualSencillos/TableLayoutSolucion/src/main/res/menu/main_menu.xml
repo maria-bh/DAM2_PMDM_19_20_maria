@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/layout_type_here_option_menu"
+        android:title="@string/layout_type_here"
+        app:showAsAction="never|withText"/>
+    <item
+        android:id="@+id/layout_colores_centrados_option_menu"
+        android:title="@string/layout_colores_centrados"
+        app:showAsAction="never|withText"/>
+    <item
+        android:id="@+id/layout_colores_escalera_option_menu"
+        android:title="@string/layout_colores_escalera_here"
+        app:showAsAction="never|withText"/>
+    <item
+        android:id="@+id/layout_teclado_numeros_option_menu"
+        android:title="@string/layout_teclado_numeros_here"
+        app:showAsAction="never|withText"/>
+    <item
+        android:id="@+id/layout_calculadora_option_menu"
+        android:title="@string/layout_calculadora"
+        app:showAsAction="never|withText"/>
+</menu>
