@@ -28,3 +28,8 @@
  ## UT1
  Aún nada
  
+ ## UT4: Diseño de la interfaz de usuario: Vistas y Layouts
+ Todos los ejercicios de esta unidad están relacionados con el diseño de la interfaz gráfica de usuario.
+ 
+ * **SolucionEj2LayoutsVisualSencillos**. Contiene la solución del ejercicio "Ej2-Ejercicios sencillos visual layouts" que os aparece en la plataforma como tarea. El proyecto Android Studio que contiene la solución lo he estructurado en **varios módulos cada uno de ellos responde al uso de un tipo de Layout concreto: LinearLayout, RelativeLayout,...**. Cuando ejecutéis uno de los módulos disponéis de un menú en la ActionBar que permite cambiar de un layout a otro para ver el resultado en ejecución.
+ 
