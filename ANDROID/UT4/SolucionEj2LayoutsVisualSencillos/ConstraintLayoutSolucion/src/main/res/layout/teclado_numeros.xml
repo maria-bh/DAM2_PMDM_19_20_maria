@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bt2"
+        android:layout_alignStart="@id/bt4"
+        android:layout_alignEnd="@id/bt4"
+        android:layout_alignBottom="@id/bt2"
+        android:layout_toStartOf="@+id/bt2"
+        android:padding="24dp"
+        android:text="@string/uno"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt5"
+        android:layout_alignStart="@+id/bt5"
+        android:layout_alignEnd="@+id/bt5"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="24dp"
+        android:text="@string/dos"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bt2"
+        android:layout_alignBottom="@id/bt2"
+        android:layout_alignStart="@id/bt6"
+        android:layout_alignEnd="@id/bt6"
+        android:layout_toEndOf="@id/bt2"
+        android:padding="24dp"
+        android:text="@string/tres"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bt5"
+        android:layout_alignBottom="@id/bt5"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/bt5"
+        android:padding="24dp"
+        android:text="@string/cuatro"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="24dp"
+        android:text="@string/cinco"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bt5"
+        android:layout_alignBottom="@id/bt5"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_toEndOf="@id/bt5"
+        android:layout_alignParentEnd="true"
+        android:padding="24dp"
+        android:text="@string/seis"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/bt8"
+        android:layout_alignTop="@id/bt8"
+        android:layout_alignStart="@id/bt4"
+        android:layout_alignEnd="@id/bt4"
+        android:layout_alignBottom="@id/bt8"
+        android:padding="24dp"
+        android:text="@string/siete"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt5"
+        android:layout_alignStart="@+id/bt5"
+        android:layout_alignEnd="@+id/bt5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="24dp"
+        android:text="@string/ocho"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/bt8"
+        android:layout_alignTop="@id/bt8"
+        android:layout_alignBottom="@id/bt8"
+        android:layout_alignStart="@id/bt6"
+        android:layout_alignEnd="@id/bt6"
+        android:padding="24dp"
+        android:text="@string/nueve"
+        android:textSize="24sp" />
+
+</RelativeLayout>
