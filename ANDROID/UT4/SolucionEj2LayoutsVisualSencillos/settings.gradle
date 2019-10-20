@@ -1,1 +1,1 @@
-include ':LinearLayoutSolucion', ':RelativeLayoutSolucion', ':TableLayoutSolucion'
+include ':LinearLayoutSolucion', ':RelativeLayoutSolucion', ':TableLayoutSolucion', ':ConstraintLayoutSolucion'

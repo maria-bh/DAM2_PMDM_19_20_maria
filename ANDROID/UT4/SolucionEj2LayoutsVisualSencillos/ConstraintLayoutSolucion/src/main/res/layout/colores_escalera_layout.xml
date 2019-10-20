@@ -1,91 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tvRed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/tvOrange"
-        android:layout_toLeftOf="@id/tvOrange"
         android:background="@color/red"
         android:padding="8dp"
         android:text="@string/red"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvOrange"
+        app:layout_constraintRight_toLeftOf="@id/tvOrange" />
 
     <TextView
         android:id="@+id/tvOrange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/tvYellow"
-        android:layout_toLeftOf="@id/tvYellow"
         android:background="@color/orange"
         android:padding="8dp"
         android:text="@string/orange"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvYellow"
+        app:layout_constraintRight_toLeftOf="@id/tvYellow" />
 
     <TextView
         android:id="@+id/tvYellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/tvGreen"
-        android:layout_toLeftOf="@id/tvGreen"
         android:background="@color/yellow"
         android:padding="8dp"
         android:text="@string/yellow"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvGreen"
+        app:layout_constraintRight_toLeftOf="@id/tvGreen" />
 
     <TextView
         android:id="@+id/tvGreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
         android:background="@color/green"
         android:padding="8dp"
         android:text="@string/green"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvGreen"
-        android:layout_toLeftOf="@id/tvGreen"
         android:background="@color/blue"
         android:padding="8dp"
         android:text="@string/blue"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/tvGreen"
+        app:layout_constraintTop_toBottomOf="@id/tvGreen" />
 
     <TextView
         android:id="@+id/tvIndigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvBlue"
-        android:layout_toLeftOf="@id/tvBlue"
         android:background="@color/indigo"
         android:padding="8dp"
         android:text="@string/indigo"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/tvBlue"
+        app:layout_constraintTop_toBottomOf="@id/tvBlue" />
 
     <TextView
         android:id="@+id/tvViolet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvIndigo"
-        android:layout_toLeftOf="@id/tvIndigo"
         android:background="@color/violet"
         android:padding="8dp"
         android:text="@string/violet"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/tvIndigo"
+        app:layout_constraintTop_toBottomOf="@id/tvIndigo" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
