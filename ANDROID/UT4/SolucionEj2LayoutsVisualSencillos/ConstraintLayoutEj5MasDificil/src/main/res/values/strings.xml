@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SolucionEj2LayoutsVisualSencillos</string>
+    <string name="btn_pantalla_ayuda">PANTALLA AYUDA</string>
+    <string name="actualizar_treinta_minutos">Actualizar cada 30 minutos</string>
+    <string name="actualizar_diez_minutos">Actualizar cada 10 minutos</string>
+    <string name="label_informacion_gps">Información de GPS</string>
+    <string name="label_nombre">Name:</string>
+    <string name="label_informacion_cuenta">Información de la Cuenta</string>
+    <string name="btn_borrar_cuenta">BORRAR CUENTA</string>
+    <string name="btn_historial">Historial</string>
+    <string name="nombre_mio">Alejandra</string>
+    <string name="label_actualizaciones">Actualizaciones:</string>
+</resources>

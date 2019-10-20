@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btBorrarCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="6dp"
+        android:text="@string/btn_borrar_cuenta"
+        app:layout_constraintBottom_toTopOf="@+id/tvInformacionCuenta"
+        app:layout_constraintEnd_toStartOf="@+id/btHistorial"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/btHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btn_historial"
+        app:layout_constraintBottom_toBottomOf="@id/btBorrarCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btBorrarCuenta"
+        app:layout_constraintTop_toTopOf="@id/btBorrarCuenta" />
+
+    <TextView
+        android:id="@+id/tvInformacionCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/label_informacion_cuenta"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clInformacionCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBorrarCuenta" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clInformacionCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/tvInformacionGps"
+        app:layout_constraintEnd_toEndOf="@id/btHistorial"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/btBorrarCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/tvInformacionCuenta">
+
+        <TextView
+            android:id="@+id/tvLabelNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_nombre"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="@id/clInformacionCuenta"
+            app:layout_constraintTop_toTopOf="@id/clInformacionCuenta" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/nombre_mio"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/tvLabelNombre"
+            app:layout_constraintTop_toTopOf="@id/clInformacionCuenta" />
+
+        <ToggleButton
+            android:id="@+id/tbOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/clInformacionCuenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvNombre"
+            app:layout_constraintTop_toTopOf="@id/clInformacionCuenta"
+            app:layout_constraintVertical_bias="0.74" />
+
+        <TextView
+            android:id="@+id/tvLabelActualizaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_actualizaciones"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="@id/clInformacionCuenta"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelNombre" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvInformacionGps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="6dp"
+        android:text="@string/label_informacion_gps"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clInformacionGps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clInformacionCuenta" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clInformacionGps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/btPantallaAyuda"
+        app:layout_constraintEnd_toEndOf="@id/btHistorial"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/btBorrarCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/tvInformacionGps">
+
+        <RadioGroup
+            android:id="@+id/rgActualizarGps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/clInformacionGps"
+            app:layout_constraintStart_toStartOf="@id/clInformacionGps"
+            app:layout_constraintTop_toTopOf="@id/clInformacionGps">
+
+            <RadioButton
+                android:id="@+id/rbActualizar30minutos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/actualizar_treinta_minutos"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/rbActualizar10minutos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/actualizar_diez_minutos"
+                android:textColor="@android:color/white" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/ivBateriaLlena"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toStartOf="@id/ivBateriaVacia"
+            app:layout_constraintStart_toStartOf="@id/clInformacionGps"
+            app:layout_constraintTop_toBottomOf="@id/rgActualizarGps"
+            app:srcCompat="@drawable/bateria_casi_llena" />
+
+        <ImageView
+            android:id="@+id/ivBateriaVacia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="@id/clInformacionGps"
+            app:layout_constraintStart_toEndOf="@id/ivBateriaLlena"
+            app:layout_constraintTop_toBottomOf="@id/rgActualizarGps"
+            app:srcCompat="@drawable/bateria_baja" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btPantallaAyuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/btn_pantalla_ayuda"
+        app:layout_constraintBottom_toTopOf="@+id/btConfiguracion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clInformacionGps" />
+
+    <ImageButton
+        android:id="@+id/btConfiguracion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bt_config"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btLike"
+        app:layout_constraintStart_toEndOf="@id/btShare"
+        app:layout_constraintTop_toBottomOf="@+id/btPantallaAyuda" />
+
+    <ImageButton
+        android:id="@+id/btShare"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bt_share"
+        app:layout_constraintBottom_toBottomOf="@id/btConfiguracion"
+        app:layout_constraintEnd_toStartOf="@id/btConfiguracion"
+        app:layout_constraintStart_toEndOf="@id/btBrujula"
+        app:layout_constraintTop_toTopOf="@+id/btConfiguracion" />
+
+    <ImageButton
+        android:id="@+id/btBrujula"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bt_brujula"
+        app:layout_constraintBottom_toBottomOf="@id/btConfiguracion"
+        app:layout_constraintEnd_toStartOf="@id/btShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btConfiguracion" />
+
+    <ImageButton
+        android:id="@+id/btLike"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bt_like"
+        app:layout_constraintBottom_toBottomOf="@id/btConfiguracion"
+        app:layout_constraintEnd_toStartOf="@id/btHelp"
+        app:layout_constraintStart_toEndOf="@id/btConfiguracion"
+        app:layout_constraintTop_toTopOf="@+id/btConfiguracion" />
+
+    <ImageButton
+        android:id="@+id/btHelp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bt_help"
+        app:layout_constraintBottom_toBottomOf="@id/btConfiguracion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btLike"
+        app:layout_constraintTop_toTopOf="@+id/btConfiguracion" />
+</android.support.constraint.ConstraintLayout>
