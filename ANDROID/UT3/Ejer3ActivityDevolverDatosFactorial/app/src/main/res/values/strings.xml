@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ejer3ActivityDevolverDatosFactorial</string>
+    <string name="labelFactorialScreen">Cálculo del Factorial</string>
+    <string name="label_boton_introducir_numero">Introducir un nº</string>
+    <string name="labelResultado">El resultado es:</string>
+    <string name="labelPedirNumero">Dame un Nº</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="error_no_numero">Introduce un número natural</string>
+    <string name="error_resultado_factorial">Hubo un error al calcular el factorial!</string>
+</resources>
