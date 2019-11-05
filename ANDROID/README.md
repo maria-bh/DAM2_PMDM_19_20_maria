@@ -25,8 +25,11 @@
  * **PrimeraAplicacion2019v3**. Esta versión implementa los "clicks" de los botones usando la propiedad "onClick" del XML del layout de la Activity. No usa escuchadores (listeners).
  
  
- ## UT1
- Aún nada
+ 
+ ## UT3: Activities
+ Todos los ejercicios de esta unidad están relacionados con el manejo de las activities.
+ 
+ * **Ejer3ActivityDevolverDatosFactorial**. Contiene el proyecto Android Studio que resuelve el ejercicio. Es una propuesta de solución. Se trabaja con dos activities y es la segunda la que realiza la petición del número y el cálculo del factorial, devolviendo su resultado a la primera activity.
  
  ## UT4: Diseño de la interfaz de usuario: Vistas y Layouts
  Todos los ejercicios de esta unidad están relacionados con el diseño de la interfaz gráfica de usuario.
