@@ -38,12 +38,12 @@
  
  * **SolEjerRadioButtonSencillo**. Contiene la solución del ejercicio "Ejercicio simple con RadioButtons" que permite convertir de grados Celsius a Fahrenheit. Incluye 2 soluciones diferentes en el mismo proyecto implementadas en diferentes módulos:
  
- * solucionsinbotoncalcular: esta solución se ha hecho usando OnCheckedChangeListener para detectar cuándo se pulsan los RadioButton. Y automáticamente en ese momento se hace la conversión.
+     * solucionsinbotoncalcular: esta solución se ha hecho usando OnCheckedChangeListener para detectar cuándo se pulsan los RadioButton. Y automáticamente en ese momento se hace la conversión.
  
- * solucionusandobotoncalcular: esta solución se ha hecho sin usar listener. Simplemente se pregunta por el valor del RadioButton cuando se pulsa el botón convertir; y es en ese momento cuando se realiza la conversión elegida.
+     * solucionusandobotoncalcular: esta solución se ha hecho sin usar listener. Simplemente se pregunta por el valor del RadioButton cuando se pulsa el botón convertir; y es en ese momento cuando se realiza la conversión elegida.
  
  * **Ejercicios RecyclerView**. Esta carpeta contiene las soluciones de los ejercicios de la lista de fútbol hecha con RecyclerView. Cada APP es un nuevo proyecto:
  
- * Tutoria2App1RecyclerView: Solución del ejercicio APP1.
- * Tutoria2App2RecyclerView: Solución del ejercicio APP2 (no es buena solución, pues añade lógica al adaptador). En el siguiente proyecto se ofrece una solución mucho mejor usando interface.
+    * Tutoria2App1RecyclerView: Solución del ejercicio APP1.
+    * Tutoria2App2RecyclerView: Solución del ejercicio APP2 (no es buena solución, pues añade lógica al adaptador). En el siguiente proyecto se ofrece una solución mucho mejor usando interface.
  * Tutoria2App2RecyclerViewConInterface: Solución de la APP2 buena: usa interface para aislar la lógica del adaptador. Éste se limita a cargar las vistas en la lista e informar de cuándo se hace click sobre una de ellas.
