@@ -36,3 +36,7 @@
  
  * **SolucionEj2LayoutsVisualSencillos**. Contiene la solución del ejercicio "Ej2-Ejercicios sencillos visual layouts" que os aparece en la plataforma como tarea. El proyecto Android Studio que contiene la solución lo he estructurado en **varios módulos cada uno de ellos responde al uso de un tipo de Layout concreto: LinearLayout, RelativeLayout,...**. Cuando ejecutéis uno de los módulos disponéis de un menú en la ActionBar que permite cambiar de un layout a otro para ver el resultado en ejecución.
  
+ * **SolEjerRadioButtonSencillo**. Contiene la solución del ejercicio "Ejercicio simple con RadioButtons" que permite convertir de grados Celsius a Fahrenheit. Incluye 2 soluciones diferentes en el mismo proyecto implementadas en diferentes módulos:
+ 
+ *solucionsinbotoncalcular: esta solución se ha hecho usando OnCheckedChangeListener para detectar cuándo se pulsan los RadioButton. Y automáticamente en ese momento se hace la conversión.
+ *solucionusandobotoncalcular: esta solución se ha hecho sin usar listener. Simplemente se pregunta por el valor del RadioButton cuando se pulsa el botón convertir; y es en ese momento cuando se realiza la conversión elegida.
