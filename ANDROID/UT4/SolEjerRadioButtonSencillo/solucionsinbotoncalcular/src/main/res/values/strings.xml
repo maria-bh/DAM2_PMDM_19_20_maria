@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Solución Sin Botón Calcular</string>
+    <string name="bt_calcular">CALCULAR</string>
+    <string name="celsius">to Celsius     </string>
+    <string name="toFahrenheit">to Fahrenheit</string>
+    <string name="error_no_hay_valor">Introduzca un valor para convertirlo, por favor!</string>
+    <string name="hint_temperatura">Temperatura</string>
+</resources>
