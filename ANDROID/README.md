@@ -38,5 +38,6 @@
  
  * **SolEjerRadioButtonSencillo**. Contiene la solución del ejercicio "Ejercicio simple con RadioButtons" que permite convertir de grados Celsius a Fahrenheit. Incluye 2 soluciones diferentes en el mismo proyecto implementadas en diferentes módulos:
  
- *solucionsinbotoncalcular: esta solución se ha hecho usando OnCheckedChangeListener para detectar cuándo se pulsan los RadioButton. Y automáticamente en ese momento se hace la conversión.
- *solucionusandobotoncalcular: esta solución se ha hecho sin usar listener. Simplemente se pregunta por el valor del RadioButton cuando se pulsa el botón convertir; y es en ese momento cuando se realiza la conversión elegida.
+ * solucionsinbotoncalcular: esta solución se ha hecho usando OnCheckedChangeListener para detectar cuándo se pulsan los RadioButton. Y automáticamente en ese momento se hace la conversión.
+ 
+ * solucionusandobotoncalcular: esta solución se ha hecho sin usar listener. Simplemente se pregunta por el valor del RadioButton cuando se pulsa el botón convertir; y es en ese momento cuando se realiza la conversión elegida.
