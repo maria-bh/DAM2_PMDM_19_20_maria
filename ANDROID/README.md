@@ -47,3 +47,8 @@
     * ***Tutoria2App1RecyclerView***: Solución del ejercicio APP1.
     * ***Tutoria2App2RecyclerView***: Solución del ejercicio APP2 (no es buena solución, pues añade lógica al adaptador). En el siguiente proyecto se ofrece una solución mucho mejor usando interface.
     * ***Tutoria2App2RecyclerViewConInterface***: Solución de la APP2 buena: usa interface para aislar la lógica del adaptador. Éste se limita a cargar las vistas en la lista e informar de cuándo se hace click sobre una de ellas.
+	
+## UT5: Fragments
+ Todos los ejercicios de esta unidad están relacionados con fragments
+ 
+ * **EjercicioSencilloFragments**. Contiene la solución del ejercicio "EjercicioSencilloFragments" que hecho en clase como ejemplo de manejo de fragments estáticos comunicados con inteface. En uno de los fragments se pide un texto y al pulsar el botón ENVIAR se envía al otro fragment cuya única tarea es mostrarlo en color rojo. Para la comunicación de los fragments se usa un interface. Se han hecho diseños alternativos para tablets de 7" en horizontal y vertical y teléfono u otros dispositivos.
