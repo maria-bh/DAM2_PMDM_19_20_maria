@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerEquipoActivity">
+
+
+    <TextView
+        android:id="@+id/tvLabelNombreEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_nombre_equipo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvNombreEquipo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNombreEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelNombreEquipo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelPuntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_puntos_equipo"
+        app:layout_constraintStart_toStartOf="@+id/tvLabelNombreEquipo"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelNombreEquipo" />
+
+    <TextView
+        android:id="@+id/tvPuntos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNombreEquipo"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreEquipo"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreEquipo"
+        tools:text="52" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

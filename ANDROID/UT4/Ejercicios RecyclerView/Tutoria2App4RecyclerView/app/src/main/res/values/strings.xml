@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tutoria2App4RecyclerView</string>
+    <string name="titulo">EQUIPOS  1ª DIVISIÓN</string>
+    <string name="label_nombre_equipo">EQUIPO:</string>
+    <string name="label_puntos_equipo">PUNTOS:</string>
+    <string name="aniadir">AÑADIR</string>
+    <string name="action_borrar">BORRAR</string>
+    <string name="labelNombreEquipo">Nombre Equipo:</string>
+    <string name="labelPuntosEquipo">Puntos Equipo:</string>
+    <string name="labelFotoEscudo">Escudo</string>
+    <string name="sin_foto">Sin Foto</string>
+    <string name="aniadirFoto">AÑADIR FOTO</string>
+    <string name="aniadirEquipo">AÑADIR EQUIPO NUEVO</string>
+</resources>
