@@ -2,6 +2,7 @@ package es.alejandrtf.ejemplofragmentslistafutbol.datos;
 
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,7 +28,7 @@ public class Equipos {
     /**
      * A dummy item representing a piece of content.
      */
-    public static class Equipo {
+    public static class Equipo implements Serializable {
         private String nombreEquipo;
         private Drawable imagenEscudo;
         private int puntos;

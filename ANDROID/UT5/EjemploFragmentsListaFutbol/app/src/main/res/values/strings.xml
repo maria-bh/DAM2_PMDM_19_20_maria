@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EjemploFragmentsListaFutbol</string>
+    <string name="label_nombre_equipo">EQUIPO:</string>
+    <string name="label_puntos_equipo">PUNTOS:</string>
 </resources>

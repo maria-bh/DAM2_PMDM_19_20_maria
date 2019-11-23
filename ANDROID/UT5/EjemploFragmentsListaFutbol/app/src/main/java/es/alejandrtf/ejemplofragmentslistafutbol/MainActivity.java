@@ -20,13 +20,17 @@ public class MainActivity extends AppCompatActivity implements ListaEquipoFragme
 
     @Override
     public void onItemClick(Equipos.Equipo item) {
-         Toast.makeText(this, item.getNombreEquipo(), Toast.LENGTH_SHORT).show();
+       //  Toast.makeText(this, item.getNombreEquipo(), Toast.LENGTH_SHORT).show();
+
+        VerEquipoFragment verEquipoFragment= (VerEquipoFragment) getSupportFragmentManager().findFragmentById(R.id.verEquipoFragment);
+        verEquipoFragment.mostrarEquipo(item);
     }
 
     /** Método que coge los datos del array de recursos xml y rellena la lista de equipos
      *  con esos datos.
      */
     private void cargarDatos() {
+        Equipos.ITEMS.clear();
         String[] nombres = getResources().getStringArray(R.array.nombre_equipo);
         int[] puntos = getResources().getIntArray(R.array.puntos_equipo);
 
