@@ -56,3 +56,8 @@
  * **EjercicioSencilloFragments**. Contiene la solución del ejercicio "EjercicioSencilloFragments" que hecho en clase como ejemplo de manejo de fragments estáticos comunicados con inteface. En uno de los fragments se pide un texto y al pulsar el botón ENVIAR se envía al otro fragment cuya única tarea es mostrarlo en color rojo. Para la comunicación de los fragments se usa un interface. Se han hecho diseños alternativos para tablets de 7" en horizontal y vertical y teléfono u otros dispositivos.
  
  * **EjemploFragmentsListaFutbol**. Contiene la solución del ejercicio hecho en clase para mostrar el manejo de fragments estáticos cuando uno de ellos es un listado con RecyclerView. Es la adaptación del ejercicio "Tutoria2App3RecyclerView" hecho en la UT4 como ejemplo de RecyclerView, pero ahora empleando fragments estáticos. Se han implementado dos diseños diferentes: en vertical el fragment listado aparece en la parte superior y el otro fragment en la inferior; y en horizontal el fragment listado aparece en la parte izquierda y el otro fragment en la parte derecha.
+ 
+ ## UT6: Intents
+ Todos los ejercicios de esta unidad están relacionados con intents
+ 
+ * **EjemploIntentsImplicitos**. Contiene un ejemplo de los intents implícitos más usados: web, map, call, dial,email y cámara fotos y galería fotos. Es el ejemplo visto en clase.
