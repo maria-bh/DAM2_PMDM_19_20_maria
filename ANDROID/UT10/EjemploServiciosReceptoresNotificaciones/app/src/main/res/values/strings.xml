@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EjemploServiciosReceptoresNotificaciones</string>
+    <string name="btDescargar_texto">Descargar Fichero</string>
+    <string name="hint_url">Introduce la URL del fichero CSV a descargar</string>
+</resources>
