@@ -61,3 +61,13 @@
  Todos los ejercicios de esta unidad están relacionados con intents
  
  * **EjemploIntentsImplicitos**. Contiene un ejemplo de los intents implícitos más usados: web, map, call, dial,email y cámara fotos y galería fotos. Es el ejemplo visto en clase.
+
+ ## UT10: Servicios, Receptores y Notificaciones
+ Todos los ejercicios de esta unidad están relacionados con los servicios, notificaciones y receptores de anuncios
+ 
+ * **EjemploServiciosReceptoresNotificaciones**. Contiene un ejemplo de uso de receptores, servicios y notificaciones en el cual se usa un servicio para descargar un archivo csv y el receptor nos avisará mediante una notificación de que la descarga ha finalizado o si hubo errores en la descarga. Es el ejemplo visto en clase.
+ 
+ ## UT11: Almacenamiento y BD
+ Todos los ejercicios de esta unidad están relacionados con el almacenamiento y BD
+ 
+ * **EjemploUsoFirebaseDatabase**. Contiene un ejemplo de uso de Firebase Realtime Database empleando un código limpio y estructurado mediante el uso de interface para el acceso a la BD, de manera que en ningún momento se mencione la BD real que estamos implementando dentro de nuestra lógica de negocio. Se accederá siempre a la BD mediante llamadas del interface que será asíncrono. Si más adelante se decide cambiar la BD a otra: MongoDB, MySql, ... el cambio será añadir una nueva implementación de nuestro interface. La BD utilizada contiene un nodo usuarios, lugares y valoraciones y en el ejemplo se muestra cómo leer y escribir valores secundarios, leer y escribir objetos enteros, actualizarlos y borrarlos y trabajar con listas usando FirebaseUI o el SDK.
