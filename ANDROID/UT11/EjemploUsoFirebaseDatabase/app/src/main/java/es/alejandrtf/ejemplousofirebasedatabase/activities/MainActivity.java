@@ -1,5 +1,6 @@
 package es.alejandrtf.ejemplousofirebasedatabase.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             etUidGuardar, etNombreUsuario, etEmailUsuario;
     private TextView tvInicioSesion, tvEmail;
 
-    public IUsuariosAsync usuarios;
+    private IUsuariosAsync usuarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_listaFirebasUI:
+                lanzarActivityListaUsuarios();
+                return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     //region MIS MÉTODOS
 
-    public void initReferences() {
+    private void initReferences() {
         etInicioSesion = findViewById(R.id.etInicioSesion);
         etUid = findViewById(R.id.etUidUsuario);
         etUidLeer = findViewById(R.id.etUidUsuarioLeer);
@@ -86,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
         etNombreUsuario = findViewById(R.id.etNombreUsuarioGuardar);
         etEmailUsuario = findViewById(R.id.etEmailGuardar);
 
+    }
+
+    private void lanzarActivityListaUsuarios(){
+        Intent i=new Intent(this,ListaUsuariosActivity.class);
+        startActivity(i);
     }
 
     //BOTONES PANTALLA
@@ -99,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onRespuesta(Long inicioSesion) {
                         Log.d("Ejemplo lectura", "Inicio Sesión = " + inicioSesion);
-                        tvInicioSesion.append(String.valueOf(inicioSesion) + "\n");
+                        tvInicioSesion.append(inicioSesion + "\n");
                     }
 
                     @Override
@@ -116,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onRespuesta(String email) {
                         Log.d("Ejemplo lectura", "Email = " + email);
-                        tvEmail.append(String.valueOf(email) + "\n");
+                        tvEmail.append(email + "\n");
                     }
 
                     @Override

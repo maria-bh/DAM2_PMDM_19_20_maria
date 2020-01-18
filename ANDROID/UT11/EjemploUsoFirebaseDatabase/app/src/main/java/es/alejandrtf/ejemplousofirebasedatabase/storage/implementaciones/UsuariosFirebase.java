@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,7 +21,7 @@ import es.alejandrtf.ejemplousofirebasedatabase.pojos.Usuario;
  * Firebase Realtime Database
  */
 public class UsuariosFirebase implements IUsuariosAsync {
-    private final String NODO_USUARIOS = "usuarios";
+    public final static String NODO_USUARIOS = "usuarios";
     private DatabaseReference nodo;
     private FirebaseDatabase database;
 
@@ -46,6 +47,12 @@ public class UsuariosFirebase implements IUsuariosAsync {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d("FIREBASE", "actualizado " + uidUsuario + ": " + inicioSesion);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("FIREBASE", "actualizando error " + e.getLocalizedMessage());
                     }
                 });
         /* NO ES NECESARIO AÑADIR EL ESCUCHADOR, sólo si lo queremos controlar.
@@ -127,5 +134,44 @@ public class UsuariosFirebase implements IUsuariosAsync {
                         escuchador.onError(error.toException());
                     }
                 });
+    }
+
+
+    //////////////////////////////////////////////////////////////////////
+    ////////////////  OPERACIONES CON LISTAS FIREBASE /////////////////////
+    //////////////////////////////////////////////////////////////////////
+    @Override
+    public void aniade(Usuario usuario) {
+        nodo.push().setValue(usuario);
+    }
+
+    @Override
+    public String nuevo() {
+        return nodo.push().getKey();
+    }
+
+    @Override
+    public void borrar(String uidUsuario) {
+        nodo.child(uidUsuario).setValue(null);
+    }
+
+    @Override
+    public void actualiza(String uidUsuario, Usuario usuario) {
+        nodo.child(uidUsuario).setValue(usuario);
+    }
+
+    @Override
+    public void getSize(final EscuchadorSizeUsuarios escuchador) {
+        nodo.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                escuchador.onRespuesta(dataSnapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                escuchador.onError(error.toException());
+            }
+        });
     }
 }
