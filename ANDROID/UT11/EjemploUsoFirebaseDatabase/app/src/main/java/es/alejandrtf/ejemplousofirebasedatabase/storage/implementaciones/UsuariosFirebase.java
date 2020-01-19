@@ -36,6 +36,13 @@ public class UsuariosFirebase implements IUsuariosAsync {
          */
     }
 
+    // GETTERS
+
+
+    public DatabaseReference getNodo() {
+        return nodo;
+    }
+
     @Override
     public void actualizarInicioSesion(final String uidUsuario, final long inicioSesion) {
         //FORMA 1 DE HACERLO: usando child() para lograr la ruta de acceso

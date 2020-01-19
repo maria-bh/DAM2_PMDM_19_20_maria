@@ -23,6 +23,10 @@ import es.alejandrtf.ejemplousofirebasedatabase.storage.interfaces.IUsuariosAsyn
 import es.alejandrtf.ejemplousofirebasedatabase.pojos.Usuario;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String LISTA_UI="UI";
+    public static final String LISTA_SDK="SDK";
+    public static final String EXTRA_TIPO_LISTA="extra_tipo_lista";
+
     private EditText etUid, etInicioSesion, etUidLeer,
             etUidGuardar, etNombreUsuario, etEmailUsuario;
     private TextView tvInicioSesion, tvEmail;
@@ -66,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
             case R.id.action_listaFirebasUI:
-                lanzarActivityListaUsuarios();
+                lanzarActivityListaUsuarios(LISTA_UI);
                 return true;
+            case R.id.action_listaFirebasSDK:
+                lanzarActivityListaUsuarios(LISTA_SDK);
         }
 
 
@@ -89,8 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void lanzarActivityListaUsuarios(){
+    private void lanzarActivityListaUsuarios(String tipo){
         Intent i=new Intent(this,ListaUsuariosActivity.class);
+        i.putExtra(EXTRA_TIPO_LISTA,tipo);
         startActivity(i);
     }
 

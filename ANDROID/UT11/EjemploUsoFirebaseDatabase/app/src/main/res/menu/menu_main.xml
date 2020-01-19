@@ -7,8 +7,7 @@
         android:title="Lista FirebaseUI"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/action_listaFirebasSDK"
+        android:title="Lista FirebaseSDK"
+        app:showAsAction="ifRoom" />
 </menu>

@@ -1,7 +1,9 @@
 package es.alejandrtf.ejemplousofirebasedatabase.factories;
 
+import es.alejandrtf.ejemplousofirebasedatabase.adapters.AdaptadorUsuarioFirebaseSDK;
 import es.alejandrtf.ejemplousofirebasedatabase.adapters.AdaptadorUsuarioFirebaseUI;
 import es.alejandrtf.ejemplousofirebasedatabase.adapters.IAdaptadorUsuario;
+import es.alejandrtf.ejemplousofirebasedatabase.storage.implementaciones.UsuariosFirebase;
 import es.alejandrtf.ejemplousofirebasedatabase.utilities.FirebaseUIHelper;
 
 /**
@@ -18,7 +20,7 @@ import es.alejandrtf.ejemplousofirebasedatabase.utilities.FirebaseUIHelper;
  * para configurar FirebaseUI de forma correcta.
  */
 public class FactoriaAdaptadorUsuario {
-    public enum TipoAdaptador {FIREBASEUI}
+    public enum TipoAdaptador {FIREBASEUI,FIREBASE_SDK}
 
     //podría haber otro tipo MongoDb,...
 
@@ -26,7 +28,9 @@ public class FactoriaAdaptadorUsuario {
         switch (tipo) {
             case FIREBASEUI:
                 return new AdaptadorUsuarioFirebaseUI(new FirebaseUIHelper());
-           /* case MONGODB:
+            case FIREBASE_SDK:
+                return new AdaptadorUsuarioFirebaseSDK(new UsuariosFirebase());
+             /* case MONGODB:
                 return new AdaptadorUsuariosMongoDB();
             */
             default:
