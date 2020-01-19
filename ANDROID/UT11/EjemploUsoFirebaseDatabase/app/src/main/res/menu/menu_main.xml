@@ -10,4 +10,8 @@
         android:id="@+id/action_listaFirebasSDK"
         android:title="Lista FirebaseSDK"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_peores_lugares"
+        android:title="Lugares valoración inferior 3"
+        app:showAsAction="never" />
 </menu>

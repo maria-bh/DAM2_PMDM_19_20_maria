@@ -9,7 +9,7 @@ import es.alejandrtf.ejemplousofirebasedatabase.storage.implementaciones.Usuario
 
 public class FirebaseUIHelper {
     private FirebaseRecyclerOptions<Usuario> optionsUsuario;
-    private Query queryLast50Usuarios;
+    private Query queryLast50Usuarios,queryLugaresMenosValoracion3;
 
     /** En el constructor definimos todas las consultas */
     public FirebaseUIHelper() {
@@ -17,6 +17,12 @@ public class FirebaseUIHelper {
                 .getReference()
                 .child(UsuariosFirebase.NODO_USUARIOS)
                 .limitToLast(50);
+        // Lugares con valoración media inferior a 3
+        queryLugaresMenosValoracion3=FirebaseDatabase.getInstance()
+                .getReference()
+                .child("lugares")
+                .orderByChild("valoracion")
+                .endAt(2.99);
         setOptionsUsuario(queryLast50Usuarios);
 
     }
@@ -29,5 +35,9 @@ public class FirebaseUIHelper {
         optionsUsuario = new FirebaseRecyclerOptions.Builder<Usuario>()
                 .setQuery(query, Usuario.class)
                 .build();
+    }
+
+    public Query getQueryLugaresMenosValoracion3() {
+        return queryLugaresMenosValoracion3;
     }
 }

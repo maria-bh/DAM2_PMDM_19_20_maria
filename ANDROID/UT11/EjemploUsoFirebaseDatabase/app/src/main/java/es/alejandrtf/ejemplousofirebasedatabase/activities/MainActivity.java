@@ -1,12 +1,15 @@
 package es.alejandrtf.ejemplousofirebasedatabase.activities;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseException;
+import com.google.firebase.database.FirebaseDatabase;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -17,10 +20,16 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.List;
+
 import es.alejandrtf.ejemplousofirebasedatabase.R;
+import es.alejandrtf.ejemplousofirebasedatabase.pojos.Lugar;
+import es.alejandrtf.ejemplousofirebasedatabase.storage.implementaciones.LugaresFirebase;
 import es.alejandrtf.ejemplousofirebasedatabase.storage.implementaciones.UsuariosFirebase;
+import es.alejandrtf.ejemplousofirebasedatabase.storage.interfaces.ILugaresAsync;
 import es.alejandrtf.ejemplousofirebasedatabase.storage.interfaces.IUsuariosAsync;
 import es.alejandrtf.ejemplousofirebasedatabase.pojos.Usuario;
+import es.alejandrtf.ejemplousofirebasedatabase.utilities.FirebaseUIHelper;
 
 public class MainActivity extends AppCompatActivity {
     public static final String LISTA_UI="UI";
@@ -31,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
             etUidGuardar, etNombreUsuario, etEmailUsuario;
     private TextView tvInicioSesion, tvEmail;
 
-    private IUsuariosAsync usuarios;
+    private IUsuariosAsync usuarios; //operaciones con usuarios
+    private ILugaresAsync lugares; //operaciones con lugares
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         //FIREBASE
         usuarios = new UsuariosFirebase();
+        lugares=new LugaresFirebase(new FirebaseUIHelper());
     }
 
     @Override
@@ -74,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_listaFirebasSDK:
                 lanzarActivityListaUsuarios(LISTA_SDK);
+                return true;
+            case R.id.action_peores_lugares:
+                mostrarAlertaPeoresLugares();
+                return true;
         }
 
 
@@ -99,6 +114,46 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this,ListaUsuariosActivity.class);
         i.putExtra(EXTRA_TIPO_LISTA,tipo);
         startActivity(i);
+    }
+
+
+    /** Ejecuta la consulta que obtiene los peores lugares
+     * (con valoración menor que 3)
+     */
+    private void mostrarAlertaPeoresLugares(){
+        lugares.getPeoresLugares(new ILugaresAsync.EscuchadorGetPeoresLugares() {
+            @Override
+            public void onRespuesta(List<Lugar> lugaresLista) {
+                crearAlertaNombreLugares(lugaresLista);
+            }
+
+            @Override
+            public void onError(DatabaseException e) {
+                Log.e("Ej consulta lugares", "Error al leer.", e);
+
+            }
+        });
+
+    }
+
+
+    private void crearAlertaNombreLugares(List<Lugar>listaLugares){
+        String message="";
+        for (Lugar lugar :
+                listaLugares) {
+            message+=lugar.getNombre()+"\n";
+        }
+        AlertDialog.Builder builder=new AlertDialog.Builder(this)
+                .setTitle("Lugares con valoración media inferior a 3")
+                .setMessage(message)
+                .setIcon(android.R.drawable.stat_notify_error)
+                .setNeutralButton("ACEPTAR", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+        builder.show();
     }
 
     //BOTONES PANTALLA

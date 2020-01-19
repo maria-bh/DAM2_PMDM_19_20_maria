@@ -1,0 +1,17 @@
+El ejemplo consta de 3 activities:
+1) Pantalla inicial (MainActivity): muestra cómo operar en Firebase sin tratar a los nodos como listas. En los dos primeros recuadros podemos probar cómo leer/escribir propiedades de un usuario (valores secundarios de un objeto).
+En el primer recuadro, si ponemos un uid de usuario, nos carga su inicio de sesión y si lo cambiamos y pulsamos el botón actualizar, lo actualiza en la BD.
+En el segundo recuadro, introducimos un uid de usuario y si pulsamos el botón LEER I.SESIÓN, nos muestra a la derecha el valor de inicio de sesión de ese usuario y se queda a la escucha de posibles cambios en la BD para autorefrescarlos. Si pulsamos el botón LEER EMAIL, a su lado aparecerá el email de ese usuario, pero no se queda escuchando cambios, así que si cambiamos ese valor en la BD, nuestra pantalla no se entera.
+En el tercer recuadro se muestra cómo leer/escribir un objeto entero. Para leer, escribimos sólo su uid y pulsamos el botón LEER USUARIO, veremos como se cargan sus datos en pantalla. Si queremos guardar un usuario nuevo, escribimos todos sus datos y pulsamos GUARDAR USUARIO.
+
+2) Menú de la PANTALLA INICIAL: En la barra superior hay un menú con 3 opciones: LISTA FIREBASEUI, ListaFirebase SDK y LUGARES VALORACIÓN INFERIOR A 3. La opciones que no se vean directamente en la barra, aparecerán en el menú representado por los 3 puntos blancos.
+
+Opción ListaFirebaseUI: carga la segunda pantalla (ListadoUsuariosActivity) creando para ello un Adaptador que usa FirebaseUI y muestra todos los usuarios y los mantiene sincronizados (cualquier cambio se actualizará automáticamente en pantalla y viceversa).
+
+Opción ListaFirebase SDK: carga la segunda pantalla (ListadoUsuariosActivity) creando para ello un Adaptador que usa Firebase SDK y muestra todos los usuarios y los mantiene sincronizados gracias a que en el adaptador implementamos el ChildEventListener.
+
+Opción "Lugares valoración inferior a 3": Es un ejemplo de consulta usando orderByChild() y endAt(). Nos devuelve aquellos lugares que tengan una valoración media inferior a 3. Muestra su nombre en un cuadro de diálogo.
+
+3) Pantalla Listado (LIstaUsuariosActivity): muestra un listado de usuarios de los 50 primeros de la BD. Se usa desde las 2 opciones explicadas antes. Además, el botón flotante del listado con el signo "+" permite añadir un nuevo usuario a la BD. Para ello muestra la tercera activity que permite introducir los datos del usuario y añadirlo. Además, si pulsamos sobre un usuario en la lista, se muestra también la tercera activity con los datos de ese usuario y podremos borrarlo o editarlo.
+
+4) Pantalla visualizar datos/añadir/borrar: es una Activity que se usa tanto para introducir los datos de un nuevo usuario, como para ver los de uno existente cuando lo elegimos en la lista anterior. Para borrar un usuario pulsar el botón flotante con el icono de papelera.
