@@ -1,0 +1,13 @@
+<div>
+  <h1 class="center">{{tituloComponente}}</h1>
+</div>
+<hr>
+<ul>
+  <li *ngFor="let miAlumno of alumnos">
+    <app-alumno [alumno]="miAlumno"
+                (borrar)="borrarAlumno(miAlumno)">
+    </app-alumno>
+    <hr>
+  </li>
+  
+</ul>

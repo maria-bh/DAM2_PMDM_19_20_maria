@@ -1,0 +1,8 @@
+.center {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  ul{
+    list-style-type: none;
+}
