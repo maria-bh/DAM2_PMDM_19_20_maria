@@ -1,0 +1,9 @@
+<input type="number" #idPostUser placeholder="Id del post" min="1" max="5">
+<button (click)="getAllComentsPost(idPostUser.value)">Aceptar</button>
+<ul>
+  <li *ngFor="let comment of comments">
+    {{comment.email}} : {{comment.body}}
+  </li>
+</ul>
+<button (click)="addPost(post)">Add new post</button>
+<router-outlet></router-outlet>
