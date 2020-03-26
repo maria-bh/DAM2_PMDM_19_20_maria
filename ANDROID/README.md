@@ -61,6 +61,11 @@
  Todos los ejercicios de esta unidad están relacionados con intents
  
  * **EjemploIntentsImplicitos**. Contiene un ejemplo de los intents implícitos más usados: web, map, call, dial,email y cámara fotos y galería fotos. Es el ejemplo visto en clase.
+ 
+ ## UT9: Almacenamiento de datos
+ Todos los ejercicios de esta unidad están relacionados con almacenamiento
+ 
+ * **EjemploPreferencias**. Contiene un ejemplo de uso de las preferencias compartidas: tanto para configurar una app como para servir de almacenamiento de datos simples. Es el ejemplo visto en clase.
 
  ## UT10: Servicios, Receptores y Notificaciones
  Todos los ejercicios de esta unidad están relacionados con los servicios, notificaciones y receptores de anuncios
