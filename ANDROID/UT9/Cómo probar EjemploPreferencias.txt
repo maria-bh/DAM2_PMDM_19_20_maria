@@ -1,0 +1,19 @@
+El ejemplo muestra cómo usar las preferencias compartidas para dos usos diferentes:
+
+1) Como opciones o pantalla de configuración de nuestra aplicación, ofreciendo diferentes opciones configurables que harán que nuestra app se comporte de manera difernte.
+Por ejemplo: con o sin música, con un color de fondo u otro,...
+
+
+2) Como sistema sencillo de almacenamiento permantente donde podemos guardar pares CLAVE-VALOR.
+   Por ejemplo en un login podríamos guardar el nombre del usuario, su puntuación,.. datos muy sencillos que nos interese almacenar.
+
+
+Para probar la aplicación, el apartado 1, simplemente se ejecuta la app y veremos en pantalla las opciones que ha elegido el usuario y tenemos un botón configurar
+donde podemos cambiarlas y ver cómo han cambiado.
+
+Para probar la aplicación, el apartado 2, desde código se está guardando un nombre de usuario y si está jubilado. Es una información que guarda el programador
+de la app, por tanto, al ejecutarla no lo veremos (se podría haber mostrado también). Para verlo, desde Android Studio pulsad en FileExplorer y veremos el navegador de carpetas del dispositivo. Navegamos a la carpeta:
+
+		/data/data/YOUR_PACKAGE_NAME/shared_prefs/YOUR_PACKAGE_NAME_preferences.xml
+
+Y ahí hacemos doble click y veremos el contenido del archivo.

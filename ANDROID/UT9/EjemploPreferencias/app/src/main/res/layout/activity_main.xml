@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Veremos el fondo de la pantalla con el color que eliga el usuario"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clFondoOpciones"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btConfiguracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:text="Configurar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clFondoOpciones" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clFondoOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/btConfiguracion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo">
+
+        <TextView
+            android:id="@+id/tvTituloMusica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Opción de MÚSICA ELEGIDA ES:"
+            android:textColor="@android:color/background_light"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/clFondoOpciones"
+            app:layout_constraintTop_toTopOf="@+id/clFondoOpciones" />
+
+        <TextView
+            android:id="@+id/tvMusica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTituloMusica"
+            app:layout_constraintEnd_toEndOf="@+id/clFondoOpciones"
+            app:layout_constraintStart_toEndOf="@+id/tvTituloMusica"
+            app:layout_constraintTop_toTopOf="@+id/clFondoOpciones"
+            tools:text="NO" />
+
+        <TextView
+            android:id="@+id/tvTituloIntentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="16dp"
+            android:text="NÚMERO INTENTOS ELEGIDO ES:"
+            android:textColor="@android:color/background_light"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/clFondoOpciones"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloMusica" />
+
+        <TextView
+            android:id="@+id/tvIntentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTituloIntentos"
+            app:layout_constraintEnd_toEndOf="@+id/clFondoOpciones"
+            app:layout_constraintStart_toEndOf="@+id/tvTituloIntentos"
+            app:layout_constraintTop_toTopOf="@+id/tvTituloIntentos"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="10" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
